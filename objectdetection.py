@@ -46,7 +46,7 @@ upload = st.file_uploader(label="Upload Image Here:", type=["png", "jpg", "jpeg"
 if upload:
     img = Image.open(upload)
 
-    if st.checkbox("Process Image"):
+    if st.button("Process Image"):
         prediction = make_prediction(img)
 
         if prediction is not None:
